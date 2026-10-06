@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05522de7-1019-4f09-a99e-2db615691f44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/data_sources_history.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/df2823eb-ea70-4d4e-bbdb-8256f6debe64.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/df2823eb-ea70-4d4e-bbdb-8256f6debe64/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/utils/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/DoctorDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/DoctorDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/models/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/df2823eb-ea70-4d4e-bbdb-8256f6debe64.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/df2823eb-ea70-4d4e-bbdb-8256f6debe64.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
