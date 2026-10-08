@@ -13,7 +13,8 @@ public class DatabaseConnection {
         try {
             String driver = "org.mariadb.jdbc.Driver";
             Class.forName(driver);
-            String url = "jdbc:mariadb://localhost:3306/practica200";
+            // TODO : Poner el puerto "3307" porque en mi ordenador personal el XAMPP está configurado así
+            String url = "jdbc:mariadb://localhost:3307/practica200";
             String user = "root";
             String password = "";
             this.connection = DriverManager.getConnection(url, user, password);
