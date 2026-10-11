@@ -9,8 +9,8 @@ public class App {
     public static void main(String[] args) throws SQLException {
 
         try {
-            DatabaseConnection db = DatabaseConnection.getInstance();
-            Connection conexion = db.getConnection();
+            DatabaseConnection dbc = DatabaseConnection.getInstance();
+            Connection conexion = dbc.getConnection();
 
             if (conexion != null && !conexion.isClosed()) {
                 System.out.println("Conexión correcta.");
