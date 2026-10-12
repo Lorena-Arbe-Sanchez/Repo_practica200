@@ -181,6 +181,42 @@ public class PatientDaoImpl implements PatientDao {
         return false;
     }
 
+    @Override
+    public List<Patient> getPatientsByDoctorId(int doctor_id) {
+
+        List<Patient> patients = new ArrayList<>();
+
+        String query = "SELECT * FROM patients WHERE doctor_id = ?";
+
+        try {
+            PreparedStatement ps = DatabaseConnection.getInstance()
+                    .getConnection().prepareStatement(query);
+
+            ps.setInt(1, doctor_id);
+
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Patient patient = new Patient(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("lastname"),
+                        rs.getString("dni"),
+                        rs.getInt("age"),
+                        rs.getString("phone"),
+                        rs.getString("disease")
+                );
+
+                patients.add(patient);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return patients;
+    }
+
     private boolean patientExists(int id) {
 
         String query = "SELECT * FROM patients WHERE id=?";

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05522de7-1019-4f09-a99e-2db615691f44" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../practica200.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../practica200.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/irepositories/DoctorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/repositories/DoctorRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/models/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/egibide/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/egibide/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -70,6 +73,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\149FA06\Desktop\Repo_practica200\practica200\src\main\java\org\egibide" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.egibide.repositories" />
     </key>
   </component>
   <component name="SharedIndexes">

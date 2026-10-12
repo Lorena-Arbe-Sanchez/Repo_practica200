@@ -5,9 +5,11 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.egibide.dao.DoctorDao;
 import org.egibide.dao.DoctorDaoImpl;
+import org.egibide.irepositories.DoctorRepository;
 import org.egibide.irepositories.PatientRepository;
 import org.egibide.models.Doctor;
 import org.egibide.models.Patient;
+import org.egibide.repositories.DoctorRepositoryImpl;
 import org.egibide.repositories.PatientRepositoryImpl;
 import org.egibide.utils.DatabaseConnection;
 
@@ -115,6 +117,7 @@ public class AppTest extends TestCase {
     }
 
     public void testGetPatient() {
+
         PatientRepository repository = new PatientRepositoryImpl();
 
         Patient patient = repository.getPatient(1);
@@ -124,4 +127,41 @@ public class AppTest extends TestCase {
         System.out.println(patient);
         System.out.println("Médico asignado: " + patient.getDoctor());
     }
+
+    public void testGetDoctor() {
+
+        DoctorRepository repository = new DoctorRepositoryImpl();
+
+        Doctor doctor = repository.getDoctor(1);
+
+        assertNotNull(doctor);
+
+        System.out.println("Médico: " + doctor.getName());
+
+        List<Patient> patients = doctor.getAttendedPatients();
+
+        assertNotNull(patients);
+
+        System.out.println("Pacientes atendidos:");
+
+        for (Patient patient : patients) {
+            System.out.println(patient);
+        }
+
+        // Este código corresponde a los tres pacientes que existen con "doctor_id = 1" en la base de datos
+        assertEquals(3, patients.size());
+    }
 }
+
+/*
+Resultado de los Test:
+
+Patient{id=1, name='Ane', lastname='Garcia Lopez', dni='12345678A', age=25, phone='600123456', disease='Gripe', doctor=Doctor{id=1, name='Marta', lastname='Pérez', dni='12345678Z', salary=35000.0, speciality='Cardiología', attendedPatients=null}}
+Médico asignado: Doctor{id=1, name='Marta', lastname='Pérez', dni='12345678Z', salary=35000.0, speciality='Cardiología', attendedPatients=null}
+
+Médico: Marta
+Pacientes atendidos:
+Patient{id=1, name='Ane', lastname='Garcia Lopez', dni='12345678A', age=25, phone='600123456', disease='Gripe', doctor=null}
+Patient{id=2, name='Mikel', lastname='Fernandez Ruiz', dni='23456789B', age=42, phone='611234567', disease='Migraña', doctor=null}
+Patient{id=3, name='Nerea', lastname='Martinez Lopez', dni='34567890C', age=30, phone='622345678', disease='Alergia', doctor=null}
+ */

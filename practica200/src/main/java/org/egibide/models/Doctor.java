@@ -1,5 +1,7 @@
 package org.egibide.models;
 
+import java.util.List;
+
 public class Doctor {
 
     private int id;
@@ -8,12 +10,13 @@ public class Doctor {
     private String dni;
     private double salary;
     private String speciality;
+    private List<Patient> attendedPatients = null;
 
     // Constructor vacío
     public Doctor() {
     }
 
-    // Constructor con todos los atributos
+    // Constructor con todos los atributos (menos la lista de pacientes)
     public Doctor(int id, String name, String lastname, String dni, double salary, String speciality) {
         this.id = id;
         this.name = name;
@@ -21,6 +24,17 @@ public class Doctor {
         this.dni = dni;
         this.salary = salary;
         this.speciality = speciality;
+    }
+
+    // Constructor con todos los atributos
+    public Doctor(int id, String name, String lastname, String dni, double salary, String speciality, List<Patient> attendedPatients) {
+        this.id = id;
+        this.name = name;
+        this.lastname = lastname;
+        this.dni = dni;
+        this.salary = salary;
+        this.speciality = speciality;
+        this.attendedPatients = attendedPatients;
     }
 
     // Getters y setters
@@ -73,6 +87,14 @@ public class Doctor {
         this.speciality = speciality;
     }
 
+    public List<Patient> getAttendedPatients() {
+        return attendedPatients;
+    }
+
+    public void setAttendedPatients(List<Patient> attendedPatients) {
+        this.attendedPatients = attendedPatients;
+    }
+
     @Override
     public String toString() {
         return "Doctor{" +
@@ -82,6 +104,7 @@ public class Doctor {
                 ", dni='" + dni + '\'' +
                 ", salary=" + salary +
                 ", speciality='" + speciality + '\'' +
+                ", attendedPatients=" + attendedPatients +
                 '}';
     }
 }

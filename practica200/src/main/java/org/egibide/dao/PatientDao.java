@@ -15,4 +15,7 @@ public interface PatientDao {
     List<Patient> getPatients();
 
     boolean update(Patient patient);
+
+    // Obtener los pacientes atendidos por un médico
+    public List<Patient> getPatientsByDoctorId(int doctor_id);
 }
