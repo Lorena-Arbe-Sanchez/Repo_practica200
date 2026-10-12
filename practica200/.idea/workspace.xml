@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05522de7-1019-4f09-a99e-2db615691f44" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/irepositories/DoctorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/egibide/repositories/DoctorRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/dao/PatientDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/models/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/models/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/irepositories/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/irepositories/PatientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/egibide/repositories/PatientRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/egibide/repositories/PatientRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/egibide/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/egibide/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

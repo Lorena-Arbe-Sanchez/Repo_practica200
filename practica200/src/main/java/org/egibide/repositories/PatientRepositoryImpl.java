@@ -20,4 +20,15 @@ public class PatientRepositoryImpl implements PatientRepository {
         patient.setDoctor(doctor);
         return patient;
     }
+
+    @Override
+    public boolean isPatientAttendedByDoctor(int patient_id, int doctor_id) {
+        Patient patient = getPatient(patient_id);
+
+        if (patient != null && patient.getDoctor() != null) {
+            return patient.getDoctor().getId() == doctor_id;
+        }
+
+        return false;
+    }
 }

@@ -151,6 +151,13 @@ public class AppTest extends TestCase {
         // Este código corresponde a los tres pacientes que existen con "doctor_id = 1" en la base de datos
         assertEquals(3, patients.size());
     }
+
+    public void testIsPatientAttendedByDoctor() {
+        PatientRepository repository = new PatientRepositoryImpl();
+
+        assertTrue(repository.isPatientAttendedByDoctor(1, 1));
+        assertFalse(repository.isPatientAttendedByDoctor(1, 2));
+    }
 }
 
 /*
