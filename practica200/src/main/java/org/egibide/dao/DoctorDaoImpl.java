@@ -152,6 +152,42 @@ public class DoctorDaoImpl implements DoctorDao {
         return false;
     }
 
+    @Override
+    public Doctor getDoctorByPatientId(int patient_id) {
+        String query = "SELECT doctors.* FROM doctors " +
+                "INNER JOIN patients ON doctors.id = patients.doctor_id " +
+                "WHERE patients.id = ?";
+
+        Doctor doctor = null;
+
+        try {
+            PreparedStatement ps = DatabaseConnection
+                    .getInstance()
+                    .getConnection()
+                    .prepareStatement(query);
+
+            ps.setInt(1, patient_id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                doctor = new Doctor(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("lastname"),
+                        rs.getString("dni"),
+                        rs.getDouble("salary"),
+                        rs.getString("speciality")
+                );
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return doctor;
+    }
+
     private boolean doctorExists(int id) {
 
         String query = "SELECT * FROM doctors WHERE id=?";

@@ -16,4 +16,5 @@ public interface DoctorDao {
 
     boolean update(Doctor doctor);
 
+    public Doctor getDoctorByPatientId(int patient_id);
 }
