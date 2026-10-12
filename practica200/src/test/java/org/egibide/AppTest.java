@@ -5,7 +5,10 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.egibide.dao.DoctorDao;
 import org.egibide.dao.DoctorDaoImpl;
+import org.egibide.irepositories.PatientRepository;
 import org.egibide.models.Doctor;
+import org.egibide.models.Patient;
+import org.egibide.repositories.PatientRepositoryImpl;
 import org.egibide.utils.DatabaseConnection;
 
 import java.sql.Connection;
@@ -109,5 +112,16 @@ public class AppTest extends TestCase {
 
         // Comprobar que se ha borrado
         assertNull(dao.getDoctor(id));
+    }
+
+    public void testGetPatient() {
+        PatientRepository repository = new PatientRepositoryImpl();
+
+        Patient patient = repository.getPatient(1);
+
+        assertNotNull(patient);
+
+        System.out.println(patient);
+        System.out.println("Médico asignado: " + patient.getDoctor());
     }
 }
